@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-var content = 'This is some content that I want to write to a file.';
+var content = '  This is some content that I want to write to a file.';
 
 const contentTwo = "content two "
 const writeFile = async () => {
@@ -12,7 +12,7 @@ const writeFile = async () => {
         await fs.writeFile('./myFile#2.txt', contentTwo, (err, contentTwo) => 
         {   
             var content = 'This is some content that I want to write to a file.';
-            console.log("Successfully wrote" +  content + " to the console. ")
+            console.log("Successfully wrote:  " +  `${content}` + " to the console. ")
         } )} ;  writeSecondFile();
     
        
@@ -25,3 +25,5 @@ const writeFile = async () => {
 };
 
 writeFile();
+
+console.log(" I wrote the file but this command should come first  ! ")
