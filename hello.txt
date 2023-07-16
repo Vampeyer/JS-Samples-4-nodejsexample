@@ -1,3 +1,5 @@
 well , hello there !  
 
-this is a file that is bewing read and written to . 
+this is a file that is being read and written to  , using 
+regular Javascript , using Node module  - fs  
+

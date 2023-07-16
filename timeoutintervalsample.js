@@ -10,9 +10,6 @@ sixthResponse : " Make a better version later ....  "
 }  
 
 
-
-
-
 setTimeout(() => {
   console.log(response.firstResponse)  
 }, 2000);

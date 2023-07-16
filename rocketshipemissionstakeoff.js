@@ -58,6 +58,9 @@ eventemitter2.on('emissionstakeoff!!!', () => {
     
     setTimeout(() => {
       console.log(response.firstResponse)  
+    
+    
+
     }, 2000);
      
     
@@ -67,27 +70,27 @@ eventemitter2.on('emissionstakeoff!!!', () => {
     
     
     
-    }, 4000); 
+    }, 6000); 
     
     setTimeout(() => {
         console.log(response.thirdResponse) 
-    }, 6000);
-    setTimeout.prototype._destroy;
+    }, 10000);
+  
     
     setTimeout(() => {
         console.log(response.fourthResponse) 
-    }, 8000);
+    }, 14000);
     
     setTimeout(() => {
         console.log(response.fifthResponse) 
-    }, 10000);
+    }, 18000);
     
 
 
     setTimeout(() => {
       console.log(response.sixthResponse) 
       
-  }, 12000);
+  }, 22000);
    
 })
 eventemitter2.emit('emissionstakeoff!!!'); 
@@ -103,25 +106,29 @@ eventemitter2.emit('emissionstakeoff!!!');
 /*  Rocketship has taken off ,  
 time to track its placement and engine controls !     */ 
  
-
+const eventemitter3 = new EventEmitter();
 
 eventemitter3.on('emissionstakeoff!!!', () => { 
-  console.log(' Countdown to take off started  ! ')  
+   
  
   let response = { 
-   firstResponse2: " Five....", 
-   secondResponse2: "Four.....", 
-   thirdResponse2 : " Three ... ", 
-   fourthResponse2 : "  Two.... ", 
-   fifthResponse2 : "     One!  ", 
-   sixthResponse2 : "         .... LIFTOFF!!!!   " ,
-   seventhResponse2: process.cpuUsage()  
+   firstResponse2: " Requesting process data from orbital ", 
+   secondResponse2: "Waiting.....", 
+   thirdResponse2 :   " Process Environment Display" , 
+   fourthResponse2 : "  Starting diagnostics , and CPU report ...  " , 
+   fifthResponse2 :  "System health basic report.   ",
+   sixthResponse2 : " Shutting down diagnostic systems , reverting too system control... " ,
+   seventhResponse2: " System  check complete.  Proceed to mapping coordinantes for auto-pilot .... Over and out. "  
    }  
    
+  
    
    setTimeout(() => {
      console.log(response.firstResponse2)  
-   }, 2000);
+     console.log(' Running mission diagnostics ') 
+     eventemitter3.removeAllListeners(response.firstResponse2)
+
+   }, 26000);
     
    
    
@@ -130,27 +137,43 @@ eventemitter3.on('emissionstakeoff!!!', () => {
    
    
    
-   }, 14000); 
+   }, 30000); 
    
    setTimeout(() => {
        console.log(response.thirdResponse2) 
-   }, 16000);
-   setTimeout.prototype._destroy;
+
+       console.log(process.env)
+
+   }, 34000);
+  
    
    setTimeout(() => {
        console.log(response.fourthResponse2) 
-   }, 18000);
+
+   
+
+   }, 38000);
    
    setTimeout(() => {
        console.log(response.fifthResponse2) 
-   }, 20000);
+       console.log (process.cpuUsage()) 
+
+   }, 42000);
    
 
 
    setTimeout(() => {
      console.log(response.sixthResponse2) 
      
- }, 21000);
+ }, 46000);
+
+ setTimeout(() => {
+  console.log(response.seventhResponse2) 
+  
+}, 50000);
+
+
+
                                 // sorry for so many numbers in variable names , Its for visibility !  
 })
 eventemitter3.emit('emissionstakeoff!!!'); 

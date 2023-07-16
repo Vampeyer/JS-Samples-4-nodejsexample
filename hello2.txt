@@ -1,0 +1,11 @@
+Hello , this a text from the hello2.txt file ,  
+this is a read fnuction being used with  a call back function , 
+callback functions ,  are pointer functions , 
+the readFile instead of the readFileSync , accepts them. 
+
+
+with two values in them , like such ,   ( err, txt ) => {  
+    the err is the request , and txt is the response. if the response is there , 
+    such as the variable txt , 
+    then err is only triggered if it isnt true, when ran . 
+}
