@@ -1,0 +1,27 @@
+ here is how you can write up an environment variable in a Node application for port 3000:
+
+Create a file called .env in the root directory of your Node application.
+In the .env file, add the following line:
+PORT=3000
+Save the .env file.
+In your Node application, you can access the environment variable by using the process.env.PORT property.
+For example, the following code will print the value of the PORT environment variable to the console:
+
+console.log(process.env.PORT);
+The output of the code will be the port number that your Node application is listening on.
+
+
+Here is an example of how you can use the PORT environment variable to set the port number that your Node application listens on:
+------------------------
+const http = require('http');
+
+const port = process.env.PORT || 3000;
+
+const server = http.createServer((req, res) => {
+  res.send('Hello world!');
+});
+
+server.listen(port);
+
+---------------------------------
+This code will listen on port 3000 if the PORT environment variable is not set. If the PORT environment variable is set, the code will listen on the port number that is specified in the environment variable.
