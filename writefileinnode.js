@@ -2,7 +2,7 @@ const fs = require('fs');
 
 var content = '  This is some content that I want to write to a file.';
 
-const contentTwo = "content two "
+const contentTwo = "Wazza zap ! "
 const writeFile = async () => {
   try {
     await fs.writeFile('./my-file.txt', content, ( err, content ) => {         

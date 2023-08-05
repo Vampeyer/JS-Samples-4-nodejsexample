@@ -1,0 +1,19 @@
+const http = require('http'); 
+
+const server = http.createServer((req, res) => { 
+
+    console.log("server Request has been made");
+
+    console.log(req); // the request object that is very large  
+    console.log(req.url) // url request object  
+    console.log(req.method)   // method request object 
+
+
+    res.setHeader('Content-Type', 'text/plain');    
+    res.write('Hello Hello ');      
+    res.end();
+});
+
+server.listen(3000,'localhost',  () => { 
+    console.log("listening for requests on https://localhost:3000");
+});
