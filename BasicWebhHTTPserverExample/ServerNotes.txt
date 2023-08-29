@@ -1,0 +1,8 @@
+
+Port Numbers  
+
+---------------
+
+port numbers are a specific channel , gateway , or port on our computer , 
+that a application should communiate through. 
+

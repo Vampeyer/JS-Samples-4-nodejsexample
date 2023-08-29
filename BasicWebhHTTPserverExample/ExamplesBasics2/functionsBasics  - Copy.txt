@@ -1,0 +1,49 @@
+
+
+FUNCTIONS BASICS 
+____________________________________
+
+In JavaScript, functions can be defined several different
+ ways depending on their purpose.
+ Here are the most common methods you can use to define a function:
+
+Using the function keyword: This syntax creates an anonymous
+ function, which means it doesn't 
+have a name associated with it. For instance:
+
+
+const myFunction = new function () {}();
+
+Using an arrow function: Arrow functions were introduced in ES6, 
+allowing you to write concise,
+,
+ anonymous functions without the need to bind the this value or declare variables beforehand. 
+ An example would look like this:
+const myOtherFunction = () => {};
+
+Using an IIFE (Immediately Invoked Function Expression): Another way to create an anonymous 
+function involves wrapping its definition within parentheses straight away, similar to creating a constant variable. Like so:
+(function (){});
+
+
+Using a named function declaration: When declaring a function with a name assigned to it,
+ it will generally take more lines of code than any of the previous examples. Here is an example:
+const addTwoNumbers = (a, b) => a + b;
+		
+
+
+These four examples showcase just a few of the various ways one could write a function in JavaScript.
+
+----
+Certainly, here's an example of a basic function that adds two numbers and outputs the result:
+
+// Define our function
+function addNumbers(...numbers) {
+  const sum = numbers.reduce((acc, val) => acc + val, 0);
+  return sum;
+}
+
+// Call the function
+console.log(addNumbers(1, 2)); // prints "3"
+console.log(addNumbers(2, 2, 4)); // prints "8"
+In this example, we define a simple function called "addNumbers" that takes any number of arguments representing integers to add together. The function uses the Array.prototype.reduce() method to iterate over each argument and accumulate them into a running total until returning that final sum. Finally, we call the function twice by passing in different sets of numbers to print out the result.
